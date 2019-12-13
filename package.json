@@ -1,0 +1,41 @@
+{
+  "name": "@grindstone/core",
+  "version": "1.8.0",
+  "description": ":pager: The simple search result collecting tool on TypeScript",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SudoDotDog/Grindstone-TypeScript.git"
+  },
+  "keywords": [
+    "Grindstone"
+  ],
+  "author": "WMXPY",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SudoDotDog/Grindstone-TypeScript/issues"
+  },
+  "homepage": "https://github.com/SudoDotDog/Grindstone-TypeScript#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "@sudoo/io": "^1.6.1",
+    "@sudoo/triforce": "^2.0.4"
+  },
+  "nyc": {
+    "extension": [
+      ".ts"
+    ],
+    "include": [
+      "src/**/*.ts"
+    ],
+    "instrument": true,
+    "reporter": [
+      "json",
+      "text-summary"
+    ],
+    "report-dir": "coverage",
+    "require": [
+      "./test/tshook.js"
+    ],
+    "sourceMap": true
+  }
+}
