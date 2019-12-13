@@ -9,6 +9,15 @@ import { GrindStoneResult } from "./declare";
 
 export class Grindstone {
 
+    public static create(
+        application: string,
+        category: string,
+        identifier: string,
+    ): Grindstone {
+
+        return new Grindstone(application, category, identifier);
+    }
+
     public static build(result: GrindStoneResult): Grindstone {
 
         const instance: Grindstone = new Grindstone(
