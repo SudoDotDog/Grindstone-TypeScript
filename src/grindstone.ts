@@ -35,6 +35,7 @@ export class Grindstone {
     private readonly _identifier: string;
 
     private _priorityWeight: number = 0;
+    private _preferenceWeight: number = 0;
 
     private _description?: string;
     private _date?: Date;
@@ -97,7 +98,7 @@ export class Grindstone {
     }
 
     public weight(): number {
-        return this._priorityWeight;
+        return this._priorityWeight + this._preferenceWeight;
     }
 
     public hash(): string {
