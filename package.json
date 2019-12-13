@@ -1,6 +1,6 @@
 {
   "name": "@grindstone/core",
-  "version": "1.8.0",
+  "version": "1.0.0",
   "description": ":pager: The simple search result collecting tool on TypeScript",
   "repository": {
     "type": "git",

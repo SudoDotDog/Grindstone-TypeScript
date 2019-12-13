@@ -106,9 +106,9 @@ export class Grindstone {
         builder.addIfExist('identifier', this._identifier);
 
         builder.addIfExist('priorityWeight', this._priorityWeight);
-        builder.addIfExist('date', new Date(this._date));
+        builder.addIfExist('date', this._date);
         builder.addIfExist('description', this._description);
-        builder.addIfExist('highlights', { ...this._highlights });
+        builder.addIfExist('highlights', this._highlights);
 
         return builder.build();
     }
