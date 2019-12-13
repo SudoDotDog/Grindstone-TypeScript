@@ -6,6 +6,8 @@
 
 export type GrindStoneResult = {
 
+    readonly priorityWeight: number;
+
     readonly application: string;
     readonly category: string;
     readonly identifier: string;
