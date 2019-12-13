@@ -86,8 +86,14 @@ export class Grindstone {
     }
 
     public setPriorityWeight(weight: number): this {
-        this._priorityWeight = weight;
+        this._priorityWeight = Number(weight);
         return this;
+    }
+    public increasePriorityWeight(amount: number): this {
+        return this.setPriorityWeight(this._priorityWeight + Number(amount));
+    }
+    public decreasePriorityWeight(amount: number): this {
+        return this.setPriorityWeight(this._priorityWeight - Number(amount));
     }
 
     public weight(): number {
