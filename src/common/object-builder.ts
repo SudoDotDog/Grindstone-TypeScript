@@ -1,6 +1,6 @@
 /**
  * @author WMXPY
- * @namespace Grindstone
+ * @namespace Common
  * @description Builder
  */
 

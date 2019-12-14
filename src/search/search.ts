@@ -1,26 +1,26 @@
 /**
  * @author WMXPY
- * @namespace Grindstone
- * @description Grindstone
+ * @namespace Search
+ * @description Search
  */
 
-import { ObjectBuilder } from "./builder";
-import { GrindstoneResult } from "./declare";
+import { ObjectBuilder } from "../common/object-builder";
+import { GrindstoneSearchResult } from "./declare";
 
-export class Grindstone {
+export class GrindstoneSearch {
 
     public static create(
         application: string,
         category: string,
         identifier: string,
-    ): Grindstone {
+    ): GrindstoneSearch {
 
-        return new Grindstone(application, category, identifier);
+        return new GrindstoneSearch(application, category, identifier);
     }
 
-    public static build(result: GrindstoneResult): Grindstone {
+    public static build(result: GrindstoneSearchResult): GrindstoneSearch {
 
-        const instance: Grindstone = new Grindstone(
+        const instance: GrindstoneSearch = new GrindstoneSearch(
             result.application,
             result.category,
             result.identifier,
@@ -117,9 +117,9 @@ export class Grindstone {
         return `${this._application}|>${this._category}|>${this._identifier}`;
     }
 
-    public result(): GrindstoneResult {
+    public result(): GrindstoneSearchResult {
 
-        const builder: ObjectBuilder<GrindstoneResult> = ObjectBuilder.create();
+        const builder: ObjectBuilder<GrindstoneSearchResult> = ObjectBuilder.create();
         builder.addIfExist('application', this._application);
         builder.addIfExist('category', this._category);
         builder.addIfExist('identifier', this._identifier);
