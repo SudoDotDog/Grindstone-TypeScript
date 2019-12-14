@@ -1,17 +1,17 @@
 /**
  * @author WMXPY
- * @namespace Grindstone
- * @description Grindstone
+ * @namespace Search
+ * @description Search
  * @override Unit
  */
 
 import { expect } from 'chai';
 import * as Chance from 'chance';
-import { Grindstone } from '../../src';
+import { GrindstoneSearch } from '../../../src';
 
-describe('Given a {Grindstone} Class', (): void => {
+describe('Given a {GrindstoneSearch} Class', (): void => {
 
-    const chance: Chance.Chance = new Chance('grindstone-grindstone');
+    const chance: Chance.Chance = new Chance('grindstone-search-search');
 
     it('should be able to create', (): void => {
 
@@ -19,7 +19,7 @@ describe('Given a {Grindstone} Class', (): void => {
         const category: string = chance.string();
         const identifier: string = chance.string();
 
-        const grindstone: Grindstone = Grindstone.create(application, category, identifier);
+        const grindstone: GrindstoneSearch = GrindstoneSearch.create(application, category, identifier);
 
         expect(grindstone.application).to.be.equal(application);
         expect(grindstone.category).to.be.equal(category);
@@ -32,7 +32,7 @@ describe('Given a {Grindstone} Class', (): void => {
         const category: string = chance.string();
         const identifier: string = chance.string();
 
-        const grindstone: Grindstone = Grindstone.create(application, category, identifier);
+        const grindstone: GrindstoneSearch = GrindstoneSearch.create(application, category, identifier);
 
         const priorityWeight: number = chance.integer();
         const preferenceWeight: number = chance.integer();
