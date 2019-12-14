@@ -4,7 +4,7 @@
  * @description Declare
  */
 
-export type GrindStoneResult = {
+export type GrindstoneResult = {
 
     readonly priorityWeight: number;
     readonly preferenceWeight: number;

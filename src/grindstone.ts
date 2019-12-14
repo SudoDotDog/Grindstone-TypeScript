@@ -5,7 +5,7 @@
  */
 
 import { ObjectBuilder } from "./builder";
-import { GrindStoneResult } from "./declare";
+import { GrindstoneResult } from "./declare";
 
 export class Grindstone {
 
@@ -18,7 +18,7 @@ export class Grindstone {
         return new Grindstone(application, category, identifier);
     }
 
-    public static build(result: GrindStoneResult): Grindstone {
+    public static build(result: GrindstoneResult): Grindstone {
 
         const instance: Grindstone = new Grindstone(
             result.application,
@@ -117,9 +117,9 @@ export class Grindstone {
         return `${this._application}|>${this._category}|>${this._identifier}`;
     }
 
-    public result(): GrindStoneResult {
+    public result(): GrindstoneResult {
 
-        const builder: ObjectBuilder<GrindStoneResult> = ObjectBuilder.create();
+        const builder: ObjectBuilder<GrindstoneResult> = ObjectBuilder.create();
         builder.addIfExist('application', this._application);
         builder.addIfExist('category', this._category);
         builder.addIfExist('identifier', this._identifier);

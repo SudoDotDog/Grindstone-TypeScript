@@ -4,7 +4,7 @@
  * @description Factory
  */
 
-import { GrindStoneResult } from "./declare";
+import { GrindstoneResult } from "./declare";
 import { Grindstone } from "./grindstone";
 
 export class GrindstoneFactory {
@@ -31,7 +31,7 @@ export class GrindstoneFactory {
         return instance;
     }
 
-    public results(): GrindStoneResult[] {
+    public results(): GrindstoneResult[] {
 
         return this._grindstones.map((each: Grindstone) => each.result());
     }

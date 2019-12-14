@@ -4,12 +4,12 @@
  * @description Dispatcher
  */
 
-import { GrindStoneResult } from "./declare";
+import { GrindstoneResult } from "./declare";
 import { Grindstone } from "./grindstone";
 
 export class GrindstoneDispatcher {
 
-    public static rebuild(results: GrindStoneResult[]): GrindstoneDispatcher {
+    public static rebuild(results: GrindstoneResult[]): GrindstoneDispatcher {
 
         const dispatcher: GrindstoneDispatcher = new GrindstoneDispatcher();
         for (const result of results) {
@@ -32,7 +32,7 @@ export class GrindstoneDispatcher {
         return this._grindstones;
     }
 
-    public build(result: GrindStoneResult): this {
+    public build(result: GrindstoneResult): this {
 
         const grindstone: Grindstone = Grindstone.build(result);
         this._grindstones.push(grindstone);
