@@ -91,10 +91,6 @@ export class GrindstoneSearch extends Grindstone {
         return this._priorityWeight + this._preferenceWeight;
     }
 
-    public hash(): string {
-        return `${this._application}|>${this._category}|>${this._identifier}`;
-    }
-
     public result(): GrindstoneSearchResult {
 
         const builder: ObjectBuilder<GrindstoneSearchResult> = ObjectBuilder.create();

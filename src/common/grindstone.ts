@@ -26,4 +26,8 @@ export class Grindstone {
     public get identifier(): string {
         return this._identifier;
     }
+
+    public hash(): string {
+        return `${this._application}|>${this._category}|>${this._identifier}`;
+    }
 }
