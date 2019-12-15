@@ -4,7 +4,7 @@
  * @description Declare
  */
 
-import { GrindstoneCommon } from "../declare";
+import { GrindstoneCommon } from "../common/declare";
 
 export type GrindstoneSearchResult = {
 
