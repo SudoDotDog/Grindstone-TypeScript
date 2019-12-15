@@ -10,11 +10,7 @@ import { GrindstoneSearchResult } from "./declare";
 
 export class GrindstoneSearch extends Grindstone {
 
-    public static create(
-        application: string,
-        category: string,
-        identifier: string,
-    ): GrindstoneSearch {
+    public static create(application: string, category: string, identifier: string): GrindstoneSearch {
 
         return new GrindstoneSearch(application, category, identifier);
     }
@@ -32,10 +28,6 @@ export class GrindstoneSearch extends Grindstone {
         return instance;
     }
 
-    private readonly _application: string;
-    private readonly _category: string;
-    private readonly _identifier: string;
-
     private _priorityWeight: number = 0;
     private _preferenceWeight: number = 0;
 
@@ -43,15 +35,6 @@ export class GrindstoneSearch extends Grindstone {
     private _date?: Date;
     private _highlights?: Record<string, any>;
 
-    public get application(): string {
-        return this._application;
-    }
-    public get category(): string {
-        return this._category;
-    }
-    public get identifier(): string {
-        return this._identifier;
-    }
     public get description(): string | undefined {
         return this._description;
     }
@@ -64,11 +47,7 @@ export class GrindstoneSearch extends Grindstone {
 
     private constructor(application: string, category: string, identifier: string) {
 
-        super();
-
-        this._application = application;
-        this._category = category;
-        this._identifier = identifier;
+        super(application, category, identifier);
     }
 
     public setDescription(description: string): this {
