@@ -4,23 +4,20 @@
  * @description Provider
  */
 
+import { GrindstoneProvider } from "../common/provider";
 import { GrindstoneSearchResult } from "./declare";
 import { GrindstoneSearch } from "./search";
 
-export class GrindstoneSearchProvider {
+export class GrindstoneSearchProvider extends GrindstoneProvider<GrindstoneSearch> {
 
     public static from(application: string): GrindstoneSearchProvider {
 
         return new GrindstoneSearchProvider(application);
     }
 
-    private readonly _application: string;
-    private readonly _grindstones: GrindstoneSearch[];
-
     private constructor(application: string) {
 
-        this._application = application;
-        this._grindstones = [];
+        super(application);
     }
 
     public createAndGet(category: string, identifier: string): GrindstoneSearch {
