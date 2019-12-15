@@ -4,10 +4,11 @@
  * @description Search
  */
 
+import { Grindstone } from "../common/grindstone";
 import { ObjectBuilder } from "../common/object-builder";
 import { GrindstoneSearchResult } from "./declare";
 
-export class GrindstoneSearch {
+export class GrindstoneSearch extends Grindstone {
 
     public static create(
         application: string,
@@ -61,11 +62,9 @@ export class GrindstoneSearch {
         return this._highlights;
     }
 
-    private constructor(
-        application: string,
-        category: string,
-        identifier: string,
-    ) {
+    private constructor(application: string, category: string, identifier: string) {
+
+        super();
 
         this._application = application;
         this._category = category;
