@@ -4,10 +4,11 @@
  * @description Consumer
  */
 
+import { GrindstoneConsumer } from "../common/consumer";
 import { GrindstoneSearchResult } from "./declare";
 import { GrindstoneSearch } from "./search";
 
-export class GrindstoneSearchConsumer {
+export class GrindstoneSearchConsumer extends GrindstoneConsumer<GrindstoneSearch> {
 
     public static rebuild(results: GrindstoneSearchResult[]): GrindstoneSearchConsumer {
 
@@ -18,18 +19,9 @@ export class GrindstoneSearchConsumer {
         return dispatcher;
     }
 
-    private readonly _grindstones: GrindstoneSearch[];
-
     private constructor() {
 
-        this._grindstones = [];
-    }
-
-    public get length(): number {
-        return this._grindstones.length;
-    }
-    public get grindstones(): GrindstoneSearch[] {
-        return this._grindstones;
+        super();
     }
 
     public build(result: GrindstoneSearchResult): this {
