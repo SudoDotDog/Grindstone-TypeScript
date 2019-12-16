@@ -4,8 +4,8 @@
  * @description Search
  */
 
+import { ObjectBuffer } from "@sudoo/buffer";
 import { Grindstone } from "../common/grindstone";
-import { ObjectBuilder } from "../common/object-builder";
 import { GrindstoneSearchResult } from "./declare";
 
 export class GrindstoneSearch extends Grindstone {
@@ -93,16 +93,16 @@ export class GrindstoneSearch extends Grindstone {
 
     public result(): GrindstoneSearchResult {
 
-        const builder: ObjectBuilder<GrindstoneSearchResult> = ObjectBuilder.create();
-        builder.addIfExist('application', this._application);
-        builder.addIfExist('category', this._category);
-        builder.addIfExist('identifier', this._identifier);
+        const buffer: ObjectBuffer<GrindstoneSearchResult> = ObjectBuffer.create();
+        buffer.addIfExist('application', this._application);
+        buffer.addIfExist('category', this._category);
+        buffer.addIfExist('identifier', this._identifier);
 
-        builder.addIfExist('priorityWeight', this._priorityWeight);
-        builder.addIfExist('date', this._date);
-        builder.addIfExist('description', this._description);
-        builder.addIfExist('highlights', this._highlights);
+        buffer.addIfExist('priorityWeight', this._priorityWeight);
+        buffer.addIfExist('date', this._date);
+        buffer.addIfExist('description', this._description);
+        buffer.addIfExist('highlights', this._highlights);
 
-        return builder.build();
+        return buffer.build();
     }
 }

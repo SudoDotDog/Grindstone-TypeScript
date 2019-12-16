@@ -5,10 +5,9 @@
  */
 
 export * from "./common/consumer";
-export * from "./common/grindstone";
-export * from "./common/object-builder";
-export * from "./common/provider";
 export * from "./common/declare";
+export * from "./common/grindstone";
+export * from "./common/provider";
 export * from "./search/consumer";
 export * from "./search/declare";
 export * from "./search/provider";

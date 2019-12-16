@@ -1,6 +1,6 @@
 {
   "name": "@grindstone/core",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": ":pager: The simple search result collecting tool on TypeScript",
   "repository": {
     "type": "git",
@@ -15,7 +15,9 @@
     "url": "https://github.com/SudoDotDog/Grindstone-TypeScript/issues"
   },
   "homepage": "https://github.com/SudoDotDog/Grindstone-TypeScript#readme",
-  "dependencies": {},
+  "dependencies": {
+    "@sudoo/buffer": "^1.0.0"
+  },
   "devDependencies": {
     "@sudoo/io": "^1.6.1",
     "@sudoo/triforce": "^2.0.4"
