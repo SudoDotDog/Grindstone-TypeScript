@@ -16,7 +16,7 @@
   },
   "homepage": "https://github.com/SudoDotDog/Grindstone-TypeScript#readme",
   "dependencies": {
-    "@sudoo/buffer": "^1.0.0"
+    "@sudoo/buffer": "^1.0.1"
   },
   "devDependencies": {
     "@sudoo/io": "^1.6.1",
